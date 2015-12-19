@@ -1,0 +1,8 @@
+body{
+  text-shadow: 10px 2px 2px #000;
+}
+p{
+  border-radius: 5px;
+  -webkit-transform: all 1s  eaes-out;
+          transform: all 1s  eaes-out;
+}

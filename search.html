@@ -6,6 +6,7 @@
   <meta name="format-detection" content="telephone=no">
   <title>担保人列表</title>
   <link rel="stylesheet" href="css/css/mian.css">
+  <link rel="stylesheet" href="css/css/mobiscroll.css">
   </head>
 <body ontouchstart="">
   <header class="u-header u-header-positive">
@@ -14,23 +15,90 @@
     <a class="u-icon-user" href="userconten.html">个人中心</a>
   </header>
   <section class="u-container u-whitespace">
-      <div class="u-row-flex u-whitespace">
+      <div class="u-row-flex u-whitespace ptb8">
         <div class="u-col">老人名称</div>
-        <div class="u-col u-col-3"><input type="text"></div>
+        <div class="u-col u-col-3 text-input">
+          <select name="oldMan" id="oldMan" class="fc-l">
+            <option value="老人A">老人A</option>
+            <option value="老人B">老人B</option>
+            <option value="老人C">老人C</option>
+            <option value="老人D">老人D</option>
+            <option value="老人E">老人E</option>
+            <option value="老人F">老人F</option>
+            <option value="老人G">老人G</option>
+          </select>
       </div>
-      <div class="u-row-flex u-whitespace">
+      </div>
+      <div class="u-row-flex u-whitespace ptb8">
         <div class="u-col">处理状态</div>
-        <div class="u-col u-col-3"><input type="text"></div>
+        <div class="u-col u-col-3 text-select">
+          <select name="oldState" id="oldState">
+            <option value="状态A">状态A</option>
+            <option value="状态B">状态B</option>
+            <option value="状态C">状态C</option>
+            <option value="状态D">状态D</option>
+            <option value="状态E">状态E</option>
+            <option value="状态F">状态F</option>
+            <option value="状态G">状态G</option>
+          </select>
+        </div>
       </div>
-      <div class="u-row-flex u-whitespace">
+      <div class="u-row-flex u-whitespace ptb8">
         <div class="u-col">发现人</div>
-        <div class="u-col u-col-3"><input type="text"></div>
+        <div class="u-col u-col-3 text-select">
+          <select name="findPeople" id="findPeople">
+            <option value="发现人A">发现人A</option>
+            <option value="发现人B">发现人B</option>
+            <option value="发现人C">发现人C</option>
+            <option value="发现人D">发现人D</option>
+            <option value="发现人E">发现人E</option>
+            <option value="发现人F">发现人F</option>
+            <option value="发现人G">发现人G</option>
+          </select>
+        </div>
       </div>
-      <div class="u-row-flex u-whitespace">
+      <div class="u-row-flex u-whitespace ptb8">
         <div class="u-col">发现时间</div>
-        <div class="u-col u-col-3"><input type="text"></div>
+        <div class="u-col u-col-3 text-select text-time">
+          <input name="validity" type="text" id="validity1" class="getdate1">
+          至
+          <input name="validity" type="text" id="validity2" class="getdate2">
+        </div>
+      </div>
+      <div class="u-row-flex u-whitespace ptb8">
+        <div class="u-col">
+          <div class="mt10">
+            <a class="u-btn u-btn-red" href="">立即搜索</a>
+          </div>
+        </div>
       </div>
   </section>
-  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/mobiscroll.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+  /*表单选择器*/
+  $('#oldMan,#oldState, #findPeople').mobiscroll().select({
+    theme: 'android-holo-light',  // Specify theme like: theme: 'ios' or omit setting to use default
+    lang: 'zh',
+    display: 'modal',
+    headerText: '请选择',
+    minWidth: 200
+  });
+  var now = new Date();
+  $('.getdate1,.getdate2').mobiscroll().date({
+    theme: 'android-holo-light',
+    lang: 'zh',
+    display: 'modal',
+    mode: 'scroller',
+    //headerText: false,
+    showNow: true,
+    nowText: '今天',
+    dateFormat: 'yy-mm-dd',
+    minDate: new Date(now.getFullYear(), 0, 0),
+      maxDate: new Date(now.getFullYear() + 5, 12, 31)
+  });
+});
+</script>
 </body>
 </html>

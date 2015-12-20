@@ -630,6 +630,164 @@ h6,
   text-align: center;
   font-size: 18px;
 }
+.u-form {
+  background-color: inherit;
+}
+.u-form-item-order.active {
+  background-color: #e5e6e7;
+}
+/* 表单输入项 */
+.u-form-item {
+  position: relative;
+  font-size: 16px;
+  height: 44px;
+  line-height: 44px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.u-form-item label:not(.u-switch):not(.u-checkbox):not(.u-radio) {
+  width: 95px;
+  position: absolute;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.u-form-item input,
+.u-form-item textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  padding-left: 95px;
+}
+.u-form-item input[type="checkbox"],
+.u-form-item input[type="radio"] {
+  padding-left: 0;
+}
+.u-form-item .u-icon-close {
+  position: absolute;
+  top: 0;
+  right: 6px;
+}
+@media (max-width: 320px) {
+  .u-form-item .u-icon-close {
+    right: 1px;
+  }
+}
+@media (max-width: 320px) {
+  .u-form-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.u-form-item-textarea {
+  height: 65px;
+}
+.u-form-item-textarea label {
+  vertical-align: top;
+}
+.u-form-item-textarea textarea {
+  margin-top: 15px;
+  border: none;
+}
+.u-form-item-textarea textarea:focus {
+  outline: none;
+}
+.u-form-item-link > li:after {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  line-height: 44px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  color: #c7c7c7;
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -22px;
+  margin-right: -10px;
+}
+@media (max-width: 320px) {
+  .u-form-item-link > li:after {
+    right: 10px;
+  }
+}
+.u-form-item-l label,
+.u-form-item-r button {
+  color: #00a5e0;
+  text-align: center;
+}
+.u-form-item-r .u-icon-close {
+  right: 125px;
+}
+.u-form-item-l input:not([type="checkbox"]):not([type="radio"]) {
+  padding-left: 115px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.u-form-item-r {
+  padding-right: 0;
+}
+.u-form-item-r input:not([type="checkbox"]):not([type="radio"]) {
+  padding-left: 0;
+  padding-right: 150px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.u-form-item-r button {
+  width: 110px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.u-form-item-r button.disabled {
+  color: #bbb;
+}
+.u-form-item-r button:not(.disabled):active {
+  background-color: #e5e6e7;
+}
+.u-form-item-pure input,
+.u-form-item-pure textarea {
+  padding-left: 0;
+}
+/* 表单展示项 */
+.u-form-item-show label {
+  color: #777;
+}
+.u-form-item-link:after {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  line-height: 44px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  color: #c7c7c7;
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -22px;
+  margin-right: -10px;
+}
+@media (max-width: 320px) {
+  .u-form-item-link:after {
+    right: 10px;
+  }
+}
+.u-form-item-checkbox,
+.u-form-item-radio,
+.u-form-item-switch {
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
 .l-left {
   float: left;
 }
@@ -902,110 +1060,59 @@ input:-ms-input-placeholder {
 .text-time > input {
   width: 100px;
 }
+input::-webkit-input-placeholder {
+  color: #fff !important;
+}
+input:-moz-placeholder {
+  color: #fff !important;
+}
+input::-moz-placeholder {
+  color: #fff !important;
+}
+input:-ms-input-placeholder {
+  color: #fff !important;
+}
 .u-sign {
-  background: #ffe501;
+  background: #7AAC38;
   color: #000;
-}
-.u-sign form .user-phone input {
-  background: url(../../images/icon-user-phone.png) left center no-repeat;
-  background-size: 1.6rem 100%;
-  padding-left: 2rem;
-}
-.u-sign form .user-key input {
-  background: url(../../images/icon-user-key.png) left center no-repeat;
-  background-size: 1.4rem 100%;
-  padding-left: 2rem;
-}
-.u-sign form .user-name input {
-  background: url(../../images/icon-user-name.png) left center no-repeat;
-  background-size: 1.6rem 100%;
-  padding-left: 2rem;
-}
-.u-sign form .user-mail input {
-  background: url(../../images/icon-user-mail.png) left center no-repeat;
-  background-size: 1.8rem 90%;
-  padding-left: 2rem;
-}
-.u-sign form .user-confirm button {
-  background: #000;
-  width: 8rem;
-  height: 36px;
-  margin-top: 4px;
-  line-height: 36px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  margin-right: 0.8rem;
 }
-.user-ensure {
-  margin-top: 20px;
+.user-key input {
+  background: url(../../images/icon-user-key.png) left center no-repeat;
+  background-size: contain;
+  padding-left: 36px;
 }
-.user-ensure button {
-  color: #ffe501;
-  letter-spacing: 0.6rem;
-}
-.user-ensure a {
-  display: block;
-  text-align: center;
-  margin-top: 16px;
-}
-.uc-border-b {
-  border-bottom: 1px solid #000;
+.user-name input {
+  background: url(../../images/icon-user-name.png) left center no-repeat;
+  background-size: contain;
+  padding-left: 36px;
 }
 .user-logo {
-  background: #ffe501;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .user-link {
   display: block;
   padding: 12px 10px;
 }
-.user-list {
-  background: #ffe501;
-}
-.user-list li {
-  display: block;
-  margin-left: 0;
-  padding-left: 10px;
-}
-.user-list li:after {
-  color: rgba(0, 0, 0, 0);
-  color: #000;
-}
-.user-list li:active {
-  background-color: #ffed89;
-}
-.u-user-edit {
-  width: 2.2rem;
-  height: 45px;
-  text-indent: -99999px;
-  background: url(../../images/icon-userexit.png) center center no-repeat;
-  background-size: contain;
-  z-index: 999;
-  display: inline-block;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  margin-top: -24px;
-}
-.u-cenlist-tit {
-  background: #ffe501;
-}
-.u-cenlist-tit .user-icon {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 8rem;
-  border: 4px solid #ffed89;
+.user-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 4px solid #7AAC38;
   margin-left: 10px;
+  overflow: hidden;
 }
-.u-cenlist-tit .user-name-text {
-  margin-left: 1rem;
+.user-icon img {
+  width: 100%;
 }
-.u-cenlist-tit .user-name-text h3 {
+.user-name-text h3 {
   font-size: 20px;
   font-weight: bold;
 }
-.u-cenlist-tit .user-name-text h4 {
+.user-name-text h4 {
   line-height: 34px;
 }
 .user-edit {
@@ -1013,81 +1120,16 @@ input:-ms-input-placeholder {
 }
 .user-edit h2 {
   display: block;
-  width: 10rem;
-  border-bottom: 2px solid #000;
-  line-height: 44px;
-  font-size: 1.8rem;
-  padding-left: 1rem;
+  width: 100%;
+  border-bottom: 2px solid #6B5E45;
+  line-height: 34px;
+  font-size: 20px;
+  padding-left: 0;
   font-weight: bold;
 }
 .user-text label {
   color: #000;
 }
 .user-text > p {
-  padding-left: 8rem;
-}
-.l-userc-title {
-  display: block;
-  width: 10rem;
-  border-bottom: 2px solid #000;
-  line-height: 44px;
-  font-size: 1.8rem;
-  padding-left: 1rem;
-  font-weight: bold;
-}
-.u-signin-btn {
-  display: inline-block;
-  width: 10rem;
-  height: 10rem;
-  line-height: 10rem;
-  border-radius: 10rem;
-  background: #363000;
-  border: 5px #756900 solid;
-}
-.u-detail-time {
-  display: inline-block;
-  padding-left: 2.5rem;
-  background: url(../../images/icon-detail-time.jpg) left center no-repeat;
-  background-size: contain;
-}
-.l-sigin-list {
-  width: 100%;
-  padding: .6rem 0;
-}
-.l-sigin-list .userimg {
-  display: block;
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 200px;
-}
-.l-sigin-list .userimg img {
-  max-width: 40px;
-}
-.l-sigin-list .username {
-  padding-left: 1rem;
-  line-height: 40px;
-}
-.l-sigin-list .sigintime {
-  padding-right: 1rem;
-  line-height: 40px;
-}
-.u-changekey {
-  background: none;
-}
-.u-changekey .user-confirm button {
-  background: #000;
-  width: 8rem;
-  height: 36px;
-  margin-top: 4px;
-  line-height: 36px;
-  border-radius: 5px;
-  margin-right: 0.8rem;
-}
-.user-bg {
-  background: none;
-}
-.user-btn-m {
-  text-align: center;
-  margin-top: 10px;
+  padding-left: 95px;
 }

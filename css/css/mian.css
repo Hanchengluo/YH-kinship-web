@@ -555,7 +555,6 @@ h6,
 .u-txt-justify-one {
   text-align: justify;
   overflow: hidden;
-  height: 24px;
 }
 .u-txt-justify-one:after {
   display: inline-block;
@@ -938,11 +937,6 @@ input:-ms-input-placeholder {
 .dis {
   display: block;
 }
-.list-box {
-  padding: 10px;
-  background: #fff;
-  border-radius: 5px;
-}
 .mt10 {
   margin-top: 10px;
 }
@@ -1017,6 +1011,36 @@ input:-ms-input-placeholder {
   font-weight: bold !important;
   text-align: left !important;
 }
+.list-box {
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+}
+.oldman-list-box {
+  background: #fff;
+}
+.oldman-list-box .u-col-3 {
+  -webkit-box-align: center;
+  display: -webkit-box;
+  font-size: 24px;
+  text-indent: 10px;
+  font-weight: 500;
+  color: #55524e;
+}
+.u-tab-nav {
+  background: #ffffff;
+  text-align: center;
+  font-size: 18px;
+}
+.u-tab-nav a {
+  color: #7aac38;
+}
+.u-tab-nav-on {
+  background: #5b891e;
+}
+.u-tab-nav-on a {
+  color: #fff;
+}
 .u-btn {
   display: inline-block;
   width: 100%;
@@ -1032,7 +1056,7 @@ input:-ms-input-placeholder {
   background: #a7a6a6;
 }
 .icon-arrow-right {
-  background: url(../../images/icon-arrow-right.png) right center no-repeat;
+  background: url(../../images/icon-arrow-right.png) #ffffff right center no-repeat;
   background-size: 45px;
 }
 .text-input > input {
@@ -1121,10 +1145,9 @@ input:-ms-input-placeholder {
 .user-edit h2 {
   display: block;
   width: 100%;
-  border-bottom: 2px solid #6B5E45;
   line-height: 34px;
   font-size: 20px;
-  padding-left: 0;
+  padding-left: 10px;
   font-weight: bold;
 }
 .user-text label {
